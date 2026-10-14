@@ -97,30 +97,24 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   text-align: left;
+  color: #e2e3ed;
 }
  
 ul, 
 ol {
-  /* font-size: 18px;  */
-  /* font-weight: bold; */
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
  
 a {
 	color: #e2e3ed;
   text-decoration: none;
 }
- 
-/* h1 { */
-  font-size: 36px;
-  line-height: 43px;
-  font-weight: 500;
-  font-family: Poppins, Helvetica, Arial, sans-serif;
-}
 
 h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 30px;
+  font-size: 1.875em;
   font-weight: 500;
 }
  
@@ -180,32 +174,69 @@ header .content-wrapper {
 
 header nav {
   width: 60%;
+  font-size: 1.125em; 
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-header .nav ul {
+header nav ul {
   display: flex;
   justify-content: space-around;
   width: 100%;
 
 }
 
+header nav ul li {
+  font-size: 1.125em;
+}
+
 .hero-area {
   display: flex;
   justify-content: center;
+}
 
+.hero area h1 {
+  font-size: 2.25em;
+  line-height: 43px; /*this is what tile says, solution says 1.2*/
+  font-weight: 500;
+  font-family: Poppins, Helvetica, Arial, sans-serif;
 }
 
 aside {
   display: flex;
   justify-content: center;
-  flex-flow: row wrap; /* this is not in solution, check later */
   background-color: #527158;
+}
+
+aside .form {
+  margin-top: 30px;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+ 
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .features {
   display: flex;
   justify-content: center;
-  align-items: center;  /* this is not in solution, check later */
 }
 
 .features h2 {
@@ -226,6 +257,7 @@ aside {
 
 .features p {
   margin: 0;
+  text-align: center;
 }
 
 .reviews {
@@ -236,7 +268,7 @@ aside {
 
 .reviews h2 {
   margin-bottom: 40px;
-  line-height: 30px;  /* this is not in solution, check later */
+  line-height: 30px;  /*this is what tile says, solution says 1*/
 }
 
 .reviews h3 {
@@ -250,6 +282,10 @@ aside {
   display: flex;
   justify-content: center;
   background-color: #527158;
+}
+
+.mission h2 {  /* this is not in solution*/
+  text-align: justify;
 }
 
 .contact-section {
@@ -280,15 +316,15 @@ aside {
 
 .faq h2 { 
   margin-bottom: 40px;
-  line-height: 30px;  /* this is not in solution, check later */
+  line-height: 30px; /*this is what tile says, solution says 1*/
 }
 
 .faq-content {
   margin-bottom: 50px;
 }
 
-.faq-content h4 {  /* this is not in solution, check later */
-  line-height: 24px;
+.faq-content h4 {  
+  line-height: 24px; /*this is what tile says, solution says 1.333*/
 }
 
 
@@ -298,6 +334,7 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: #202322;
 }
 
 footer .content-wrapper {
@@ -310,7 +347,6 @@ footer .contact {
 
 footer p {
   margin: 0;
-  background-color: #202322;
 }
 
 footer .social-icons {
@@ -421,27 +457,22 @@ footer .copyright {
 /*Tablet styles*/
 @media only screen and (min-width: 768px) {
 
-  h1 {
-    font-size: 48px;
-    line-height: 48px;
-  }
-
-    h2 {
-    font-size: 36px;
-    line-height: 48px;
-  }
-
-    h3 {
-    font-size: 24px;
-    line-height: 30px;
-  }
-
   /* General styles */
   .content-wrapper {
     max-width: 640px;
     margin: 100px 0;
   }
- 
+
+  h2 {
+    font-size: 2.25em;
+    line-height: 48px; /*this is what tile says, solution says 1.333*/
+  }
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 30px; /*this is what tile says, solution says 1.35*/
+  }
+
   /* Header */
   header {
   padding: 33px 0;
@@ -451,7 +482,10 @@ footer .copyright {
     width: 100%;
     justify-content: space-between;
   }
- 
+  header figure {
+    width: 30%
+  }
+
   header nav {
     width: 20%;
   }
@@ -465,6 +499,12 @@ footer .copyright {
   }
  
   /* Hero Area */
+  
+  .hero-area h1 { 
+    font-size: 3em;
+    line-height: 48px; /*this is what tile says, solution says 1*/
+    margin: 0;
+  }
  
   /* Aside */
   aside .content-wrapper {
@@ -501,23 +541,34 @@ footer .copyright {
   .reviews article div {
     width: 50%;        
   }
+  
+  .reviews h2 { /*this is from solution, I have no idea what is refering to*/
+    width: 85%;
+  }
+  
+  .reviews h3 {/*this is from solution, I have no idea what is refering to*/
+    width: 75%;
+    margin: 0;
+  }
  
   /* Footer */
   footer .content-wrapper {
-    width: 80%;
+    width: 65%;
   }
     
-  .footer-content {
+  footer .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
   }
   footer h4 {
-    font-size: 24px;
+    font-size: 1.5em;
+    margin-bottom: 40px;
   }
 
    footer p {
-    line-height: 18x;
+    line-height: 1.125;
    }
 
   footer .contact {
@@ -546,13 +597,14 @@ footer .copyright {
     width: 80%;
   }
   
-  .contact h4 {
-    font-size: 24px;
-  }
   .contact-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+  }
+
+  .contact-content h4 {
+    font-size: 1.5em;
   }
 
   /* ==========FAQ Page============= */
@@ -570,44 +622,48 @@ footer .copyright {
 
   .faq h4,
   .faq p {
-    font-size: 14px;
-    line-height: 15.75px;
+    font-size: .875em;
+    line-height: 15.75px; /*solution says something else*/
   } 
 }
   
    /*Desktop styles*/
 
 @media only screen and (min-width: 1200px) {
-
-  h1 {
-    font-size: 60px;
-  }
-  
-  h2 {
-    font-size: 36px;
-  }
-
-  h3,
-  h4 {
-    font-size: 30px;
-  }
+  /* General styles */
 
   .content-wrapper {
     max-width: 960px;
   }
- 
+  /* Header */
+
   header {
     padding: 15px 0;
   }
 
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3,
+  h4 {
+    font-size: 1.875em;
+  }
+
+  p {
+    font-size: 1.125em;
+    line-height: 24px; /*solution says 1.333*/
+  }
+
   /* Hero */
   .hero-area h1 {
+    font-size: 3.75em;
     width: 80%;
   }
  
   /* Aside */
   aside .content-wrapper {
-    justify-content: around;
+    justify-content: space-around;
   }
  
   aside .content-wrapper .form-description,
@@ -615,6 +671,10 @@ footer .copyright {
     width: 30%;
   }
  
+  .form-description p {
+    font-size: 1.125em;
+  }
+
   /* Features */
   .features h2 {
     width: 90%;
@@ -625,6 +685,10 @@ footer .copyright {
   }
  
   /* Reviews */ 
+  .reviews h2 {
+    padding-bottom: 50px;
+  }
+  
   .reviews article div {
     width: 45%;
   }
@@ -633,22 +697,23 @@ footer .copyright {
   .mission h2,
   .contact-section .content-wrapper h2 {
     width: 95%;
+    font-size: 3em;
   }
 
-  .mission h2 { 
-    font-size: 48px;
+  .contact-content h4 {
+    font-size: 1.875em;
   }
  
   /* ==========FAQ Page============ */
   .faq h2 {
     width: 100%;
-    font-size: 48px;
+    font-size: 3em;
   }
   
   .faq h4,
   .faq p {
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 1.125em;
+    line-height: 18px; /*solution says 1*/
   }
 }
 
