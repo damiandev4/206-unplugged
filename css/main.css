@@ -218,13 +218,15 @@ footer .social-icons {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 21px;  /* this is not in solution, check later */
 }
 
 footer .social-icons p {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #527158
+  font-size: 1.3125em;
+
 }
 
 footer .copyright {
@@ -302,7 +304,7 @@ input[type=button] {
 }
 
 .features i {
-	font-size: 5em;
+	font-size: 3.75em;
   margin-bottom: 40px;
 }
 
