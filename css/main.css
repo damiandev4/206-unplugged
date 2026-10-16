@@ -131,24 +131,25 @@ p {
   line-height: 1.125;
 }
  
-img {
- 
+img { 
+	width: 100%;
 }
  
 figure {
- 
+  margin: 0;
 }
- 
+
 address {
- font-style: normal;
+  font-style: normal;
 }
- 
-/* General Styles */
+
 .content-wrapper {
   outline: 2px dotted red;
   width: 90%;
   margin: 50px 0;
 }
+ 
+/* ---- Base Header - Footer Styles---- */
 
 header {
   display: flex;
@@ -163,6 +164,10 @@ header .content-wrapper {
   align-items: center;
   flex-flow: row wrap;
   margin: 0;
+}
+
+header figure {
+  width: 60%;
 }
 
 .header-divider{
@@ -183,14 +188,58 @@ header nav ul {
   display: flex;
   justify-content: space-around;
   width: 100%;
-
 }
 
 header nav ul li {
   font-size: 1.125em;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #202322;
+}
+
+footer .content-wrapper {
+  width: 55%;
+}
+
+footer .contact {
+  margin-bottom: 50px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 21px;  /* this is not in solution, check later */
+}
+
+footer .social-icons p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .copyright {
+  margin: 20px 0;
+}
+
+/* -------------------- Mobile Styles - Homepage -------------------- */
+
 .hero-area {
+ 
+  background-image: url('../img/unplugged-retreat.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
   display: flex;
   justify-content: center;
 }
@@ -235,8 +284,12 @@ input[type=button] {
 }
 
 .features {
+  background-image: url('../img/unplugged-retreat-features.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
+  min-height: 500px;
 }
 
 .features h2 {
@@ -325,45 +378,6 @@ input[type=button] {
 
 .faq-content h4 {  
   line-height: 24px; /*this is what tile says, solution says 1.333*/
-}
-
-
-/*========== Footer ==========*/
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: #202322;
-}
-
-footer .content-wrapper {
-  width: 55%;
-}
-
-footer .contact {
-  margin-bottom: 50px;
-}
-
-footer p {
-  margin: 0;
-}
-
-footer .social-icons {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 21px;  /* this is not in solution, check later */
-}
-
-footer .social-icons p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-footer .copyright {
-  margin: 20px 0;
 }
 
 /* ==========================================================================
@@ -482,6 +496,7 @@ footer .copyright {
     width: 100%;
     justify-content: space-between;
   }
+
   header figure {
     width: 30%
   }
@@ -529,7 +544,7 @@ footer .copyright {
   }
  
   .features .features-item-description {
-    width: 50%;
+    width: 49%;
   }
  
   /* Reviews */
@@ -537,9 +552,10 @@ footer .copyright {
     display: flex;
     justify-content: space-between;
   }
-    
+   
+  .reviews article figure,
   .reviews article div {
-    width: 50%;        
+    width: %;        
   }
   
   .reviews h2 { /*this is from solution, I have no idea what is refering to*/
@@ -635,6 +651,7 @@ footer .copyright {
   .content-wrapper {
     max-width: 960px;
   }
+  
   /* Header */
 
   header {
