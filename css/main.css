@@ -94,8 +94,8 @@ html {
 }
  
 body {
-  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
   text-align: left;
   color: #e2e3ed;
 }
@@ -111,11 +111,12 @@ a {
 	color: #e2e3ed;
   text-decoration: none;
 }
-
+====================/*COME BACK TO THESE */=====================
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
   font-weight: 500;
+  margin: 0;
 }
  
 h3, 
@@ -125,7 +126,7 @@ h4 {
   font-weight: 500;
   margin: 20px 0;
 }
- 
+ ====================/*COME BACK TO THESE */=====================
 p {
   font-size: .875em;
   line-height: 1.125;
@@ -144,7 +145,7 @@ address {
 }
 
 .content-wrapper {
-  outline: 2px dotted red;
+  /*outline: 2px dotted red; */
   width: 90%;
   margin: 50px 0;
 }
@@ -159,11 +160,11 @@ header {
 }
 
 header .content-wrapper {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  margin: 0;
 }
 
 header figure {
@@ -171,10 +172,10 @@ header figure {
 }
 
 .header-divider{
+  color: #3a3a3a;
   width: 100%;
   height: 1px;
   margin: 10px 0 20px 0;
-  color: #3a3a3a;
 }
 
 header nav {
@@ -185,9 +186,9 @@ header nav {
 }
 
 header nav ul {
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  width: 100%;
 }
 
 header nav ul li {
@@ -202,16 +203,16 @@ footer {
   background-color: #202322;
 }
 
+footer p {
+  margin: 0;
+}
+
 footer .content-wrapper {
   width: 55%;
 }
 
 footer .contact {
   margin-bottom: 50px;
-}
-
-footer p {
-  margin: 0;
 }
 
 footer .social-icons {
@@ -221,12 +222,17 @@ footer .social-icons {
 }
 
 footer .social-icons p {
+  background-color: #527158;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #527158
-  font-size: 1.3125em;
+}
 
+footer .social-icons p i {
+  font-size: 1.3125em;
 }
 
 footer .copyright {
@@ -240,7 +246,6 @@ footer .copyright {
   background-image: url('../img/unplugged-retreat.jpg'); 
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   min-height: 500px;
   display: flex;
   justify-content: center;
@@ -248,15 +253,15 @@ footer .copyright {
 
 .hero area h1 {
   font-size: 2.25em;
-  line-height: 43px; /*this is what tile says, solution says 1.2*/
-  font-weight: 500;
   font-family: Poppins, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 43px; /*this is what tile says, solution says 1.2*/
 }
 
 aside {
+  background-color: #527158;
   display: flex;
   justify-content: center;
-  background-color: #527158;
 }
 
 aside .form {
@@ -290,8 +295,7 @@ input[type=button] {
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: center;
-  min-height: 500px;
+  justify-content: center; 
 }
 
 .features h2 {
@@ -303,11 +307,6 @@ input[type=button] {
   margin: 30px 0;
 }
 
-.features i {
-	font-size: 3.75em;
-  margin-bottom: 40px;
-}
-
 .features .features-items {
   display: flex;
   justify-content: center;
@@ -315,20 +314,25 @@ input[type=button] {
   flex-flow: row wrap;
 }
 
+.features i {
+	font-size: 3.75em;
+  margin-bottom: 40px;
+}
+
 .features p {
-  margin: 0;
   text-align: center;
+  margin: 0;
 }
 
 .reviews {
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
-  background-color: #2a423a;
 }
 
 .reviews h2 {
   margin-bottom: 40px;
-  line-height: 30px;  /*this is what tile says, solution says 1*/
+  line-height: 1;  /*tile says 30px*/
 }
 
 .reviews h3 {
@@ -339,13 +343,9 @@ input[type=button] {
 /*========== About Page ==========*/
 
 .mission {
+   background-color: #527158;
   display: flex;
   justify-content: center;
-  background-color: #527158;
-}
-
-.mission h2 {  /* this is not in solution*/
-  text-align: justify;
 }
 
 .map figure {
@@ -365,21 +365,21 @@ input[type=button] {
 }
 
 .contact-section {
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
-  background-color: #2a423a;
 }
 
-.contact-content {
+.contact-content p {
   margin: 0;
 }
 
 /*========== FAQ Page ==========*/
 
 .faq {
+  background-color: #527158;
   display: flex;
   justify-content: center;
-  background-color: #527158;
 }
 
 .faq .content-wrapper {
@@ -392,13 +392,15 @@ input[type=button] {
 
 .faq h2 { 
   margin-bottom: 40px;
-  line-height: 30px; /*this is what tile says, solution says 1*/
+  font-size: 1.875em;
+  line-height: 30px;
 }
 
 .faq-content {
   margin-bottom: 50px;
 }
 
+.faq-content h2,
 .faq-content h4 {  
   line-height: 24px; /*this is what tile says, solution says 1.333*/
 }
@@ -500,19 +502,22 @@ input[type=button] {
     margin: 100px 0;
   }
 
+  .mission h1,
+  .faq h1,
   h2 {
     font-size: 2.25em;
-    line-height: 48px; /*this is what tile says, solution says 1.333*/
+    line-height: 1.333; /* tile says 48px*/
   }
 
+  .form-description h2,
   h3 {
     font-size: 1.5em;
-    line-height: 30px; /*this is what tile says, solution says 1.35*/
+    line-height: 1.25; /*tile says 30px*/
   }
 
   /* Header */
   header {
-  padding: 33px 0;
+    padding: 33px 0;
   }
  
   header .content-wrapper {
@@ -538,9 +543,13 @@ input[type=button] {
  
   /* Hero Area */
   
+  .hero-area {
+    min-height:600px;
+  }
+
   .hero-area h1 { 
     font-size: 3em;
-    line-height: 48px; /*this is what tile says, solution says 1*/
+    line-height: 1; /*tile says 48px*/
     margin: 0;
   }
  
@@ -550,6 +559,7 @@ input[type=button] {
     display: flex;
     justify-content: space-between;
     align-content: flex-start;
+    align-items: center;
   }
  
   aside .content-wrapper .form-description,
@@ -559,6 +569,11 @@ input[type=button] {
   }
  
   /* Features */
+
+  .features h2 {
+    margin-bottom: 20px;
+  }
+  
   .features article {
     display: flex;
     align-items: center;
@@ -567,7 +582,11 @@ input[type=button] {
   }
  
   .features .features-item-description {
-    width: 49%;
+    width: 62%;
+  }
+
+  .features i {
+    margin-bottom: 30px;
   }
  
   /* Reviews */
@@ -576,15 +595,14 @@ input[type=button] {
     justify-content: space-between;
   }
    
-  .reviews article figure,
-  .reviews article div {
-    width: %;        
-  }
-  
   .reviews h2 { /*this is from solution, I have no idea what is refering to*/
     width: 85%;
   }
   
+  .reviews article figure,
+  .reviews article div {
+    width: 49%;        
+  }
   .reviews h3 {/*this is from solution, I have no idea what is refering to*/
     width: 75%;
     margin: 0;
@@ -601,17 +619,24 @@ input[type=button] {
     align-items: center;
     flex-direction: row;
   }
+  
+  footer .contact {
+    margin-bottom: 0;
+  }
+
+  footer h3,
   footer h4 {
     font-size: 1.5em;
     margin-bottom: 40px;
   }
-
-   footer p {
-    line-height: 1.125;
+  
+  footer p {
+    line-height: 1.285;
    }
 
-  footer .contact {
-    margin-bottom: 0;
+  footer .social-icons {
+    width: 12.5em;
+    justify-content: space-between;
   }
  
   footer .copyright {
@@ -644,7 +669,8 @@ input[type=button] {
     justify-content: space-between;
     align-items: flex-start;
   }
-
+  
+  .contact-content h3,
   .contact-content h4 {
     font-size: 1.5em;
   }
@@ -658,18 +684,20 @@ input[type=button] {
   .faq-content {
     flex-basis: 45%;
   }
- 
+
+  .faq h1,
   .faq h2 {
     width: 100%;
 
+  .faq h2,
   .faq h4,
   .faq p {
     font-size: .875em;
-    line-height: 15.75px; /*solution says something else*/
+    line-height: 1.125;
   } 
 }
   
-   /*Desktop styles*/
+ /*Desktop styles*/
 
 @media only screen and (min-width: 1200px) {
   /* General styles */
@@ -688,6 +716,7 @@ input[type=button] {
     font-size: 2.25em;
   }
 
+  .form-description h2,
   h3,
   h4 {
     font-size: 1.875em;
@@ -695,7 +724,7 @@ input[type=button] {
 
   p {
     font-size: 1.125em;
-    line-height: 24px; /*solution says 1.333*/
+    line-height: 1.333; /*tile says 24px*/
   }
 
   /* Hero */
@@ -711,7 +740,7 @@ input[type=button] {
  
   aside .content-wrapper .form-description,
   aside .content-wrapper .form {
-    width: 30%;
+    width: 40%;
   }
  
   .form-description p {
@@ -735,33 +764,39 @@ input[type=button] {
   .reviews article div {
     width: 45%;
   }
- 
+  footer h3, /*NOT SURE WHY THIS IS REPEATED HERE*/
+  footer h4 {
+    font-size: 1.875em;
+  }
+
   /* =========About Page============= */
   
   .map figure {
     padding-bottom: 37.5%;
   }
   
+  .mission h1,
   .mission h2,
   .contact-section .content-wrapper h2 {
     width: 95%;
     font-size: 3em;
   }
 
+  .contact-content h3,
   .contact-content h4 {
     font-size: 1.875em;
   }
  
   /* ==========FAQ Page============ */
-  .faq h2 {
-    width: 100%;
+  
+  .faq h2, {
     font-size: 3em;
   }
-  
+
   .faq h4,
   .faq p {
     font-size: 1.125em;
-    line-height: 18px; /*solution says 1*/
+    line-height: 1; /*tiles says 18px*/
   }
 }
 
